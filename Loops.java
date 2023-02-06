@@ -16,11 +16,22 @@ public class Loops {
       }
       }
     }
+
+    public static double nRandoms(int n) {
+      double ave = 0;
+      for (int index = 0; index < n; index++) {
+        ave += Math.random();
+      }
+      ave = ave / n;
+      return ave;
+    }
+
     public static void main(String[] args) {
 
       // testing of static methods goes here
   
-      nHellos(125);
+      // nHellos(125);
+      System.out.println(nRandoms(3));
     }
   }
 
