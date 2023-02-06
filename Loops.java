@@ -26,12 +26,22 @@ public class Loops {
       return ave;
     }
 
+    public static boolean isPrime(int n) {
+      for (int index = 2; index < n; index++) {
+        if (n % index == 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+
     public static void main(String[] args) {
 
       // testing of static methods goes here
   
       // nHellos(125);
-      System.out.println(nRandoms(3));
+      // System.out.println(nRandoms(3));
+      System.out.println(isPrime(59));
     }
   }
 
