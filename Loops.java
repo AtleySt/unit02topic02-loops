@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Loops {
 
   // static methods go here
@@ -34,14 +36,32 @@ public class Loops {
       }
       return true;
     }
-
+    
+    public static int[] getFactors(int n) {
+      int numberOfFactors = 0;
+      for (int index = 1; index <= n; index++) {
+        if (n % index == 0){
+          numberOfFactors++;
+        }
+      }
+      int[] factors = new int[numberOfFactors];
+      int count = 0;
+      for (int index = 1; index <= n; index++) {
+        if (n % index == 0){
+          factors[count] = index;
+          count++;
+        }
+      }
+      return factors;
+    }
     public static void main(String[] args) {
 
       // testing of static methods goes here
   
       // nHellos(125);
       // System.out.println(nRandoms(3));
-      System.out.println(isPrime(59));
+      // System.out.println(isPrime(59));
+      System.out.println(Arrays.toString(getFactors(24)));
     }
   }
 
